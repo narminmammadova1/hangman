@@ -12,6 +12,7 @@ class HangmanGame {
     this.chosenWord = "";
     this.lettersInChosenWord = [];
     this.arrCorrectLetters = [];
+
     this.arrWrongLetters = [];
     this.lines = [];
 
@@ -45,14 +46,13 @@ class HangmanGame {
   }
 
   isWin() {
-    if (this.arrCorrectLetters.join("") === this.chosenWord) {
+    if (this.arrCorrectLetters.length === this.chosenWord.length) {
       alert("You win!");
       this.wins++;
       this.winsElement.innerHTML = this.wins;
       this.refresh();
     }
   }
-
   isLose() {
     if (this.arrWrongLetters.length === 9) {
       alert("You lose!");
@@ -96,6 +96,6 @@ class HangmanGame {
   }
 }
 
-
+// console.log(hangmanGame.arrCorrectLetters);
 
 const hangmanGame = new HangmanGame(wordList, imagesList);
