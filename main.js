@@ -47,10 +47,13 @@ class HangmanGame {
 
   isWin() {
     if (this.arrCorrectLetters.length === this.chosenWord.length) {
-      alert("You win!");
       this.wins++;
       this.winsElement.innerHTML = this.wins;
+            alert(`You win!  Correct word is ${this.chosenWord}`);
+           
       this.refresh();
+
+      // this.refresh();
     }
   }
   isLose() {
