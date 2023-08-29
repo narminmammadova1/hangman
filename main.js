@@ -58,7 +58,7 @@ class HangmanGame {
   }
   isLose() {
     if (this.arrWrongLetters.length === 9) {
-      alert("You lose!");
+      alert(`You lose!  Correct word is ${this.chosenWord}`);
       this.losses++;
       this.lossesElement.innerHTML = this.losses;
       this.refresh();
